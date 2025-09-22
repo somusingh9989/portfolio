@@ -1,0 +1,63 @@
+
+h2.text-center.mb-4 {
+    margin-top: 50px;
+}
+.profile-img {
+width: 100%;
+max-width: 350px;
+height: 400px;
+object-fit: cover;    
+border-radius: 15px;  
+transition: transform 0.4s ease, box-shadow 0.4s ease;
+opacity: 0;
+transform: scale(0.9);
+}
+.profile-img.show {
+    opacity: 1;
+    transform: scale(1);
+}
+.profile-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+#typewriter {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    border-right: 2px solid #007bff;
+    white-space: nowrap;
+    overflow: hidden;
+}
+    #projects .swiper {
+    padding-bottom: 50px;
+}
+#projects .swiper-pagination {
+    bottom: 10px !important;
+    text-align: center;
+}
+#projects .card {
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#projects .card:hover {
+    transform: translateY(-5px);
+}
+#projects .card-img-top {
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+#projects .btn {
+    margin-top: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+#projects .btn:hover {
+    background-color: #0056b3;
+}
