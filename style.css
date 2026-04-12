@@ -1,0 +1,407 @@
+/* CSS Variables & Global Settings */
+:root {
+    --primary-color: #6366f1;
+    --secondary-color: #4f46e5;
+    --accent-color: #818cf8;
+    --dark-text: #1e293b;
+    --light-text: #64748b;
+    --bg-color: #f8fafc;
+    --glass-bg: rgba(255, 255, 255, 0.65);
+    --glass-border: rgba(255, 255, 255, 0.5);
+    --font-main: 'Outfit', sans-serif;
+}
+
+body.dark-mode {
+    --dark-text: #f1f5f9;
+    --light-text: #cbd5e1;
+    --bg-color: #0f172a;
+    /* Gradient Haze Background */
+    background: radial-gradient(circle at 15% 50%, rgba(79, 70, 229, 0.08), transparent 25%),
+        radial-gradient(circle at 85% 30%, rgba(99, 102, 241, 0.08), transparent 25%),
+        #0b1120;
+    /* Deep blue-black, not pitch black */
+    --glass-bg: rgba(15, 23, 42, 0.85);
+    /* Darker glass */
+    --glass-border: rgba(255, 255, 255, 0.08);
+}
+
+body.dark-mode .glass-card {
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.7), rgba(15, 23, 42, 0.8));
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    /* Soft deep shadow */
+}
+
+/* Ensure sections have subtle separation */
+body.dark-mode section:nth-child(even) {
+    background: rgba(255, 255, 255, 0.02);
+    /* Very subtle overlay for separation */
+}
+
+body.dark-mode .navbar-toggler-icon {
+    filter: invert(1);
+}
+
+body.dark-mode .form-control {
+    background-color: rgba(30, 41, 59, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #f8fafc;
+}
+
+body.dark-mode .form-control::placeholder {
+    color: #f8fafc;
+}
+
+body.dark-mode .form-control::placeholder {
+    color: #94a3b8;
+}
+
+/* Dark Mode Text Overrides */
+body.dark-mode .text-muted,
+body.dark-mode .text-secondary {
+    color: #cbd5e1 !important;
+    /* Slate 300 */
+}
+
+body.dark-mode .text-dark {
+    color: #f8fafc !important;
+}
+
+body.dark-mode .btn-outline-dark {
+    color: #e2e8f0;
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+body.dark-mode .btn-outline-dark:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.8);
+}
+
+body.dark-mode .bg-light {
+    background-color: #1e293b !important;
+    /* Slate 800 */
+    color: #f8fafc !important;
+}
+
+body.dark-mode .bg-light-gradient {
+    background: linear-gradient(180deg, rgba(15, 23, 42, 0), rgba(99, 102, 241, 0.1));
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+    color: #f1f5f9;
+}
+
+/* Dark mode navbar overrides */
+body.dark-mode .navbar {
+    background: rgba(15, 23, 42, 0.85);
+    /* Darker glass for nav */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .nav-link {
+    color: #e2e8f0;
+}
+
+body.dark-mode .nav-link:hover,
+body.dark-mode .nav-link.active {
+    color: var(--primary-color);
+}
+
+/* Card Titles in Dark Mode */
+body.dark-mode .glass-card h4,
+body.dark-mode .glass-card h5 {
+    color: #f8fafc;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-color);
+    color: var(--dark-text);
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 600;
+    color: var(--dark-text);
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* Utilities */
+.text-primary-gradient {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.bg-primary-gradient {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+}
+
+.bg-light-gradient {
+    background: linear-gradient(180deg, transparent, rgba(99, 102, 241, 0.03));
+}
+
+.bg-soft-primary {
+    background-color: rgba(99, 102, 241, 0.1);
+}
+
+.letter-spacing-2 {
+    letter-spacing: 2px;
+}
+
+.section-padding {
+    padding: 100px 0;
+}
+
+/* Glassmorphism */
+.glass-effect {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* Buttons */
+.btn-primary-gradient {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px -1px rgba(99, 102, 241, 0.3);
+}
+
+.btn-primary-gradient:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(99, 102, 241, 0.4);
+    color: white;
+}
+
+/* Navbar */
+.navbar-brand {
+    font-size: 1.5rem;
+}
+
+/* Navbar Active Highlight */
+.nav-link {
+    position: relative;
+    font-weight: 500;
+    color: var(--dark-text);
+    margin: 0 5px;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background: var(--primary-color);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 80%;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--primary-color);
+}
+
+/* Hero Background Shapes */
+.bg-shape {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    z-index: 0;
+    opacity: 0.6;
+}
+
+.shape-1 {
+    width: 400px;
+    height: 400px;
+    background: rgba(99, 102, 241, 0.4);
+    top: -100px;
+    right: -100px;
+    animation: float 6s ease-in-out infinite;
+}
+
+.shape-2 {
+    width: 300px;
+    height: 300px;
+    background: rgba(236, 72, 153, 0.3);
+    bottom: -50px;
+    left: -50px;
+    animation: float 8s ease-in-out infinite reverse;
+}
+
+@keyframes float {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(20px, 30px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+/* Contact Icon Box */
+.icon-box {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+/* Form */
+.hero-avatar {
+    max-height: 550px;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+    animation: avatar-glow 3s infinite alternate ease-in-out;
+}
+
+body.dark-mode .hero-avatar {
+    mix-blend-mode: normal; /* Multiply hides image on dark mode */
+}
+
+@keyframes avatar-glow {
+    0% {
+        filter: drop-shadow(0 0 15px rgba(99, 102, 241, 0.4));
+    }
+    100% {
+        filter: drop-shadow(0 0 35px rgba(99, 102, 241, 0.8));
+    }
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border: 1px solid var(--accent-color);
+    background-color: white;
+}
+
+/* Footer Styles */
+.social-icon-box {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-icon-box:hover {
+    transform: translateY(-3px);
+    background: var(--primary-color) !important;
+    color: white !important;
+    box-shadow: 0 10px 15px -3px rgba(99, 102, 241, 0.4) !important;
+}
+
+.hover-primary {
+    transition: color 0.2s ease;
+}
+
+.hover-primary:hover {
+    color: var(--primary-color) !important;
+    padding-left: 5px;
+}
+
+/* Dark Mode Footer Adjustments */
+body.dark-mode footer.bg-light-gradient {
+    background: rgba(15, 23, 42, 0.6);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .social-icon-box {
+    background-color: rgba(30, 41, 59, 0.8) !important;
+    color: #cbd5e1 !important;
+}
+
+body.dark-mode .social-icon-box:hover {
+    background: var(--primary-color) !important;
+    color: white !important;
+}
+
+body.dark-mode footer .border-secondary-subtle {
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Progress Bar Hover Glow */
+.progress-bar {
+    transition: width 1.5s ease-in-out, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover .progress-bar {
+    box-shadow: 0 0 15px rgba(99, 102, 241, 0.9);
+}
+
+/* Custom Horizontal Scrollbar for Slider */
+.custom-scrollbar {
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: var(--primary-color) rgba(0, 0, 0, 0.05); /* Firefox */
+}
+.custom-scrollbar::-webkit-scrollbar {
+    height: 8px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 10px;
+}
+body.dark-mode .custom-scrollbar::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* Swiper Outer Edge Navigation */
+.swiper-nav-wrapper .swiper-button-prev { left: -10px !important; }
+.swiper-nav-wrapper .swiper-button-next { right: -10px !important; }
+
+@media (min-width: 992px) {
+    .swiper-nav-wrapper .swiper-button-prev { left: -50px !important; }
+    .swiper-nav-wrapper .swiper-button-next { right: -50px !important; }
+}
