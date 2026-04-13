@@ -1,5 +1,11 @@
 /* script.js */
 $(document).ready(function () {
+    // Initialize AOS Animation
+    AOS.init({
+        duration: 800,
+        once: false,
+        offset: 100
+    });
 
     // Smooth Scrolling for anchor links
     $('a[href^="#"]').on('click', function (event) {
@@ -29,6 +35,13 @@ $(document).ready(function () {
                 $('.navbar-nav .nav-link').eq(i).addClass('active');
             }
         });
+    });
+
+    // Auto collapse navbar on mobile link click
+    $('.navbar-nav .nav-link').on('click', function () {
+        if ($('.navbar-collapse').hasClass('show')) {
+            $('.navbar-toggler').click();
+        }
     });
 
     // Reveal Animations on Scroll (Simple Fade-in)
@@ -80,25 +93,45 @@ $(document).ready(function () {
     // Contact Form Submit Logic
     $('#contactForm').submit(function (e) {
         e.preventDefault();
-        
+
         var name = $('#contactName').val();
         var email = $('#contactEmail').val();
+        var subject = $('#contactSubject').val() || "Portfolio Inquiry";
         var message = $('#contactMessage').val();
-        
+
         var bodyMsg = "Hello Saumya,\n\nYou have a new message from your portfolio.\n\n" +
-                      "Name: " + name + "\n" +
-                      "Email: " + email + "\n" +
-                      "Message: \n" + message;
+            "Name: " + name + "\n" +
+            "Email: " + email + "\n" +
+            "Subject: " + subject + "\n" +
+            "Message: \n" + message;
 
         // WhatsApp trigger
         var whatsappUrl = "https://wa.me/918948092963?text=" + encodeURIComponent(bodyMsg);
         window.open(whatsappUrl, '_blank');
-        
+
         // Email trigger
-        var mailtoUrl = "mailto:saumyasingh76520@gmail.com?subject=New Contact Message from " + encodeURIComponent(name) + "&body=" + encodeURIComponent(bodyMsg);
+        var mailtoUrl = "mailto:saumyasingh11328@gmail.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(bodyMsg);
         window.location.href = mailtoUrl;
 
         // Clear the form
         this.reset();
+
+        // Show success message
+        var successMsg = $('#formSuccessMessage');
+        successMsg.fadeIn();
+        setTimeout(function () {
+            successMsg.fadeOut();
+        }, 15000); // 15 seconds wait time
     });
+
+    // Typed.js Initialization
+    if ($('#typed-text').length > 0) {
+        new Typed('#typed-text', {
+            strings: ['.NET Developer', 'Backend Developer', 'MVC and Web API Developer', 'SQL and Backend Specialist', 'Optimizing Database Performance'],
+            typeSpeed: 60,
+            backSpeed: 40,
+            backDelay: 2000,
+            loop: true
+        });
+    }
 });
