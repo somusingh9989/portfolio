@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="style.css">
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -54,11 +56,12 @@
         <div class="bg-shape shape-2"></div>
         <div class="container position-relative z-1">
             <div class="row align-items-center">
-                <div class="col-lg-7 text-center text-lg-start">
+                <div class="col-lg-7 text-center text-lg-start" data-aos="fade-right" data-aos-duration="1000">
                     <span class="badge bg-soft-primary text-primary mb-3 px-3 py-2 rounded-pill">Welcome to my
                         Portfolio</span>
                     <h1 class="display-3 fw-bold mb-3">Hi, I'm <span class="text-primary-gradient">Saumya</span></h1>
-                    <h2 class="h3 text-muted mb-4">.NET Developer | MVC | C# | SQL
+                    <h2 class="h3 text-muted mb-4" style="min-height: 28px;">
+                        <span id="typed-text" class="text-primary-gradient fw-semibold"></span>
                     </h2>
                     <p class="lead text-secondary mb-5 w-lg-75">
                         Building systems that stand firm on clarity, structure, and real-world purpose. Focused on
@@ -72,7 +75,7 @@
                                 class="bi bi-download ms-2"></i></a>
                     </div>
                 </div>
-                <div class="col-lg-5 mt-5 mt-lg-0 text-center">
+                <div class="col-lg-5 mt-5 mt-lg-0 text-center" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
                     <div class="position-relative d-inline-block">
                         <img src="profile.png" alt="Saumya Profile" class="img-fluid hero-avatar">
                     </div>
@@ -86,7 +89,7 @@
         <div class="container">
             <div class="row align-items-center justify-content-center">
                 <div class="col-lg-10">
-                    <div class="glass-card p-5 rounded-4">
+                    <div class="glass-card p-5 rounded-4" data-aos="fade-up" data-aos-duration="400">
                         <h6 class="text-primary text-uppercase letter-spacing-2 mb-2">About Me</h6>
                         <h2 class="fw-bold mb-4">Refined Code, <span class="text-primary-gradient">Meaningful</span>
                             Solutions.</h2>
@@ -126,7 +129,7 @@
                                     </div>
                                 </div>
                             </a>
-                            <a href="image/Saumya_Reume.pdf" download="Saumya_Resume.pdf"
+                            <a href="Saumya_Reume.pdf" download="Saumya_Resume.pdf"
                                 class="btn btn-primary-gradient rounded-pill px-4 ms-md-auto mt-3 mt-md-0">
                                 Download Resume <i class="bi bi-download ms-2"></i>
                             </a>
@@ -140,13 +143,13 @@
     <!-- Skills Section -->
     <section id="skills" class="section-padding bg-light-gradient">
         <div class="container">
-            <div class="text-center mb-5">
+            <div class="text-center mb-5" data-aos="fade-up">
                 <h2 class="fw-bold mb-3">Technical <span class="text-primary-gradient">Skills</span></h2>
                 <p class="text-secondary">Technologies I work with to build efficient and scalable applications.</p>
             </div>
             <div class="row g-4 justify-content-center">
                 <!-- Backend -->
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
                     <div class="glass-card p-4 rounded-4 h-100 hover-lift">
                         <div class="d-flex align-items-center mb-4 gap-2">
                             <i class="bi bi-hdd-network fs-4 text-primary"></i>
@@ -222,7 +225,7 @@
                 </div>
 
                 <!-- Database -->
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
                     <div class="glass-card p-4 rounded-4 h-100 hover-lift">
                         <div class="d-flex align-items-center mb-4 gap-2">
                             <i class="bi bi-database fs-4 text-primary"></i>
@@ -265,7 +268,7 @@
                 </div>
 
                 <!-- Frontend -->
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
                     <div class="glass-card p-4 rounded-4 h-100 hover-lift">
                         <div class="d-flex align-items-center mb-4 gap-2">
                             <i class="bi bi-window-sidebar fs-4 text-primary"></i>
@@ -349,7 +352,7 @@
             <div class="text-center mb-5">
                 <h2 class="fw-bold">Featured <span class="text-primary-gradient">Projects</span></h2>
             </div>
-            <div class="position-relative swiper-nav-wrapper">
+            <div class="position-relative swiper-nav-wrapper" data-aos="fade-up" data-aos-delay="200">
                 <div class="swiper projectSwiper pb-5">
                     <div class="swiper-wrapper">
                         <!-- Project 1 -->
@@ -465,7 +468,7 @@
             <div class="text-center mb-5">
                 <h2 class="fw-bold">My <span class="text-primary-gradient">Experience</span></h2>
             </div>
-            <div class="position-relative swiper-nav-wrapper">
+            <div class="position-relative swiper-nav-wrapper" data-aos="zoom-in" data-aos-duration="800">
                 <div class="swiper expSwiper pb-5">
                     <div class="swiper-wrapper">
                         <!-- Item 1 -->
@@ -473,12 +476,15 @@
                             <div class="glass-card p-4 rounded-4 h-100 hover-lift d-flex flex-column">
                                 <div class="d-flex flex-column flex-sm-row justify-content-between mb-2">
                                     <h4 class="fw-bold mb-1">.NET Developer</h4>
-                                    <span class="badge bg-soft-primary text-primary align-self-start">April 2024 - Present</span>
+                                    <span class="badge bg-soft-primary text-primary align-self-start">April 2024 -
+                                        Present</span>
                                 </div>
-                                <h6 class="text-primary mb-3"><i class="bi bi-building me-2"></i>Ezytm Technology, Jaipur</h6>
-                                <p class="text-secondary mb-3 small">Working on end-to-end development of fintech-based web applications, primarily focused on recharge and wallet systems. Developed and maintained REST APIs using ASP.NET Web API for seamless integration with frontend and mobile applications.</p>
-                                <p class="text-secondary mb-3 small">Implemented features such as reporting systems, dynamic dashboards, wallet management, and recharge modules. Designed and optimized complex queries, stored procedures, and data access using SQL Server, Dapper, Entity Framework, and ADO.NET to ensure high performance.</p>
-                                <p class="text-secondary mb-0 small">Also handled Excel import/export functionalities, dynamic menu management, and followed structured architecture using services and repository patterns to build scalable and maintainable systems.</p>
+                                <h6 class="text-primary mb-3"><i class="bi bi-building me-2"></i>Ezytm Technology,
+                                    Jaipur</h6>
+                                <p class="text-secondary mb-0 small">Working as a .NET Developer on fintech-based
+                                    applications, focusing on recharge and wallet systems. Responsible for building
+                                    APIs, handling backend logic, and optimizing performance for scalable web solutions.
+                                </p>
                             </div>
                         </div>
                         <!-- Item 2 -->
@@ -486,19 +492,20 @@
                             <div class="glass-card p-4 rounded-4 h-100 hover-lift d-flex flex-column">
                                 <div class="d-flex flex-column flex-sm-row justify-content-between mb-2">
                                     <h4 class="fw-bold mb-1">Junior Developer (Apprenticeship)</h4>
-                                    <span class="badge bg-soft-primary text-primary align-self-start">Aug 2023 - Feb 2024</span>
+                                    <span class="badge bg-soft-primary text-primary align-self-start">Aug 2023 - Feb
+                                        2024</span>
                                 </div>
-                                <h6 class="text-primary mb-3"><i class="bi bi-building me-2"></i>Mecatredz Technology Pvt Ltd Lucknow</h6>
-                                <p class="text-secondary mb-3 small">Completed training in ASP.NET MVC and C#, focusing on understanding web application architecture and development fundamentals. Gained hands-on exposure to building basic modules, working with databases, and implementing CRUD operations.</p>
-                                <p class="text-secondary mb-0 small">Developed a strong foundation in backend development concepts, coding practices, and real-world project structure.</p>
+                                <h6 class="text-primary mb-3"><i class="bi bi-building me-2"></i>Mecatredz Technology
+                                    Pvt Ltd Lucknow</h6>
+                                <p class="text-secondary mb-0 small">Completed training in ASP.NET MVC and C#, gaining
+                                    hands-on experience in building basic modules, working with databases, and
+                                    understanding real-world application architecture.</p>
                             </div>
                         </div>
                     </div>
                     <!-- Pagination & Navigation -->
                     <div class="swiper-pagination exp-pagination"></div>
                 </div>
-                <div class="swiper-button-next exp-next"></div>
-                <div class="swiper-button-prev exp-prev"></div>
             </div>
         </div>
     </section>
@@ -506,8 +513,8 @@
     <!-- Contact Section -->
     <section id="contact" class="section-padding">
         <div class="container">
-            <div class="row align-items-center justify-content-center">
-                <div class="col-lg-6 text-center text-lg-start mb-5 mb-lg-0">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-lg-6 text-center text-lg-start mb-5 mb-lg-0" data-aos="fade-right">
                     <h2 class="display-5 fw-bold mb-3">Let’s build something <br><span
                             class="text-primary-gradient">meaningful together.</span></h2>
                     <p class="lead text-secondary mb-4">Have a project in mind? Reach out to me.</p>
@@ -518,7 +525,9 @@
                         </div>
                         <div>
                             <p class="mb-0 text-muted small">Email Me</p>
-                            <h6 class="fw-bold mb-0">saumyasingh76520@gmail.com</h6>
+                            <h6 class="fw-bold mb-0 text-break"><a href="mailto:saumyasingh11328@gmail.com"
+                                    class="text-decoration-none text-dark hover-primary">saumyasingh11328@gmail.com</a>
+                            </h6>
                         </div>
                     </div>
                     <div class="d-flex align-items-center gap-3 justify-content-center justify-content-lg-start">
@@ -527,33 +536,70 @@
                         </div>
                         <div>
                             <p class="mb-0 text-muted small">Call Me</p>
-                            <h6 class="fw-bold mb-0">+91 8948092963</h6>
+                            <h6 class="fw-bold mb-0"><a href="tel:+918948092963"
+                                    class="text-decoration-none text-dark hover-primary">+91 8948092963</a></h6>
                         </div>
+                    </div>
+
+                    <div class="d-flex gap-3 mt-4 mb-4 justify-content-center justify-content-lg-start">
+                        <a href="https://www.linkedin.com/in/saumya-singh9989" target="_blank" rel="noopener noreferrer"
+                            class="social-icon-box rounded-circle bg-white shadow-sm text-primary hover-lift"
+                            style="text-decoration: none;">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/somusingh9989" target="_blank" rel="noopener noreferrer"
+                            class="social-icon-box rounded-circle bg-white shadow-sm text-primary hover-lift"
+                            style="text-decoration: none;">
+                            <i class="bi bi-github"></i>
+                        </a>
                     </div>
                 </div>
 
-                <div class="col-lg-5">
-                    <div class="glass-card p-5 rounded-4 shadow-sm">
+                <div class="col-lg-5" data-aos="fade-left" data-aos-delay="200">
+                    <div class="glass-card p-5 rounded-4 shadow-lg"
+                        style="box-shadow: 0 15px 35px rgba(0,0,0,0.15) !important;">
                         <form id="contactForm">
-                            <div class="mb-3">
-                                <label class="form-label text-muted small" for="contactName">Name</label>
-                                <input type="text" id="contactName"
-                                    class="form-control form-control-lg border-0 bg-light" placeholder="Your Name"
-                                    required>
+                            <h4 class="fw-bold mb-4 text-dark"><i
+                                    class="bi bi-chat-dots-fill text-primary me-2"></i>Send a Message</h4>
+                            <div class="row g-3 mb-3">
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="text" id="contactName" class="form-control border-0 bg-light"
+                                            placeholder="Your Name" required>
+                                        <label for="contactName" class="text-muted"><i
+                                                class="bi bi-person me-1"></i>Your Name</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="email" id="contactEmail" class="form-control border-0 bg-light"
+                                            placeholder="name@example.com" required>
+                                        <label for="contactEmail" class="text-muted"><i
+                                                class="bi bi-envelope me-1"></i>Email Address</label>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="mb-3">
-                                <label class="form-label text-muted small" for="contactEmail">Email</label>
-                                <input type="email" id="contactEmail"
-                                    class="form-control form-control-lg border-0 bg-light"
-                                    placeholder="name@example.com" required>
+                            <div class="form-floating mb-3">
+                                <input type="text" id="contactSubject" class="form-control border-0 bg-light"
+                                    placeholder="Project Inquiry" required>
+                                <label for="contactSubject" class="text-muted"><i
+                                        class="bi bi-card-text me-1"></i>Subject</label>
                             </div>
-                            <div class="mb-4">
-                                <label class="form-label text-muted small" for="contactMessage">Message</label>
-                                <textarea id="contactMessage" class="form-control form-control-lg border-0 bg-light"
-                                    rows="4" placeholder="Tell me about your project..." required></textarea>
+                            <div class="form-floating mb-4">
+                                <textarea id="contactMessage" class="form-control border-0 bg-light"
+                                    placeholder="Tell me about your project..." style="height: 140px"
+                                    required></textarea>
+                                <label for="contactMessage" class="text-muted"><i
+                                        class="bi bi-pencil me-1"></i>Message</label>
                             </div>
-                            <button type="submit" class="btn btn-primary-gradient w-100 btn-lg rounded-pill">Send
-                                Message</button>
+                            <button type="submit"
+                                class="btn btn-primary-gradient w-100 btn-lg rounded-pill mt-2 hover-lift">
+                                <i class="bi bi-send-fill me-2"></i>Send Message
+                            </button>
+                            <div id="formSuccessMessage" class="alert alert-success mt-3 mb-0 text-center rounded-pill"
+                                style="display: none;" role="alert">
+                                <i class="bi bi-check-circle-fill me-2"></i>Message sent successfully!
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -567,44 +613,87 @@
         <div class="container position-relative z-1">
             <div class="row g-4 mb-5">
                 <div class="col-lg-5">
-                    <a class="navbar-brand fw-bold fs-3 mb-3 d-block" href="#">Saumya<span
+                    <a class="navbar-brand fw-bold fs-3 mb-3 d-block" href="#">Saumya Singh<span
                             class="text-primary-gradient">.</span></a>
                     <p class="text-secondary mb-4 w-75">
                         Building digital experiences with precision and creativity. Let's turn your ideas into reality.
                     </p>
                     <div class="d-flex gap-3">
-                        <a href="mailto:saumyasingh76520@gmail.com"
-                            class="social-icon-box rounded-circle bg-white shadow-sm text-primary">
+                        <a href="mailto:saumyasingh11328@gmail.com" target="_blank"
+                            class="social-icon-box rounded-circle bg-white shadow-sm text-primary hover-lift">
                             <i class="bi bi-envelope-fill"></i>
                         </a>
-                        <a href="#" class="social-icon-box rounded-circle bg-white shadow-sm text-primary">
+                        <a href="https://www.linkedin.com/in/saumya-singh9989" target="_blank" rel="noopener noreferrer"
+                            class="social-icon-box rounded-circle bg-white shadow-sm text-primary hover-lift">
                             <i class="bi bi-linkedin"></i>
                         </a>
-                        <a href="#" class="social-icon-box rounded-circle bg-white shadow-sm text-primary">
+                        <a href="https://github.com/somusingh9989" target="_blank" rel="noopener noreferrer"
+                            class="social-icon-box rounded-circle bg-white shadow-sm text-primary hover-lift">
                             <i class="bi bi-github"></i>
                         </a>
                     </div>
                 </div>
-                <div class="col-lg-3 col-6">
-                    <h5 class="fw-bold mb-3">Quick Links</h5>
+                <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
+                    <h5 class="fw-bold mb-4">Quick Links</h5>
                     <ul class="list-unstyled">
-                        <li class="mb-2"><a href="#home"
-                                class="text-secondary text-decoration-none hover-primary">Home</a></li>
-                        <li class="mb-2"><a href="#about"
-                                class="text-secondary text-decoration-none hover-primary">About</a></li>
-                        <li class="mb-2"><a href="#projects"
-                                class="text-secondary text-decoration-none hover-primary">Projects</a></li>
-                        <li class="mb-2"><a href="#contact"
-                                class="text-secondary text-decoration-none hover-primary">Contact</a></li>
+                        <li class="mb-3"><a href="#home"
+                                class="text-secondary text-decoration-none hover-primary d-inline-flex align-items-center"><i
+                                    class="bi bi-chevron-right small me-2 text-primary"></i>Home</a></li>
+                        <li class="mb-3"><a href="#about"
+                                class="text-secondary text-decoration-none hover-primary d-inline-flex align-items-center"><i
+                                    class="bi bi-chevron-right small me-2 text-primary"></i>About</a></li>
+                        <li class="mb-3"><a href="#skills"
+                                class="text-secondary text-decoration-none hover-primary d-inline-flex align-items-center"><i
+                                    class="bi bi-chevron-right small me-2 text-primary"></i>Skills</a></li>
+                        <li class="mb-3"><a href="#experience"
+                                class="text-secondary text-decoration-none hover-primary d-inline-flex align-items-center"><i
+                                    class="bi bi-chevron-right small me-2 text-primary"></i>Experience</a></li>
+                        <li class="mb-3"><a href="#projects"
+                                class="text-secondary text-decoration-none hover-primary d-inline-flex align-items-center"><i
+                                    class="bi bi-chevron-right small me-2 text-primary"></i>Projects</a></li>
+                        <li class="mb-3"><a href="#contact"
+                                class="text-secondary text-decoration-none hover-primary d-inline-flex align-items-center"><i
+                                    class="bi bi-chevron-right small me-2 text-primary"></i>Contact</a></li>
                     </ul>
                 </div>
-                <div class="col-lg-4 col-6">
-                    <h5 class="fw-bold mb-3">Services</h5>
+                <div class="col-lg-4 col-sm-6">
+                    <h5 class="fw-bold mb-4">Tech Stack</h5>
                     <ul class="list-unstyled">
-                        <li class="mb-2"><span class="text-secondary">Web Development</span></li>
-                        <li class="mb-2"><span class="text-secondary">.NET Solutions</span></li>
-                        <li class="mb-2"><span class="text-secondary">Database Management</span></li>
-                        <li class="mb-2"><span class="text-secondary">API Integration</span></li>
+                        <li class="mb-3 d-flex align-items-center">
+                            <div class="bg-soft-primary rounded-circle d-flex align-items-center justify-content-center me-3"
+                                style="width: 32px; height: 32px;">
+                                <i class="bi bi-laptop text-primary small"></i>
+                            </div>
+                            <span class="text-secondary fw-medium">Web Development</span>
+                        </li>
+                        <li class="mb-3 d-flex align-items-center">
+                            <div class="bg-soft-primary rounded-circle d-flex align-items-center justify-content-center me-3"
+                                style="width: 32px; height: 32px;">
+                                <i class="bi bi-code-slash text-primary small"></i>
+                            </div>
+                            <span class="text-secondary fw-medium">.NET Solutions</span>
+                        </li>
+                        <li class="mb-3 d-flex align-items-center">
+                            <div class="bg-soft-primary rounded-circle d-flex align-items-center justify-content-center me-3"
+                                style="width: 32px; height: 32px;">
+                                <i class="bi bi-database text-primary small"></i>
+                            </div>
+                            <span class="text-secondary fw-medium">Database Management</span>
+                        </li>
+                        <li class="mb-3 d-flex align-items-center">
+                            <div class="bg-soft-primary rounded-circle d-flex align-items-center justify-content-center me-3"
+                                style="width: 32px; height: 32px;">
+                                <i class="bi bi-globe2 text-primary small"></i>
+                            </div>
+                            <span class="text-secondary fw-medium">API Integration</span>
+                        </li>
+                        <li class="mb-0 d-flex align-items-center">
+                            <div class="bg-soft-primary rounded-circle d-flex align-items-center justify-content-center me-3"
+                                style="width: 32px; height: 32px;">
+                                <i class="bi bi-lightning-charge text-primary small"></i>
+                            </div>
+                            <span class="text-secondary fw-medium">Performance Optimization</span>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -620,10 +709,18 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Typed JS -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         var swiper = new Swiper(".projectSwiper", {
             slidesPerView: 1,
             spaceBetween: 24,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true,
@@ -649,15 +746,16 @@
                 el: ".exp-pagination",
                 clickable: true,
             },
-            navigation: {
-                nextEl: ".exp-next",
-                prevEl: ".exp-prev",
-            },
             breakpoints: {
+                0: {
+                    enabled: false
+                },
                 768: {
+                    enabled: true,
                     slidesPerView: 1,
                 },
                 992: {
+                    enabled: true,
                     slidesPerView: 2,
                 }
             }
