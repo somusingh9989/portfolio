@@ -128,11 +128,15 @@ body.dark-mode .glass-card h5 {
     color: #f8fafc;
 }
 
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
 body {
     font-family: var(--font-main);
     background-color: var(--bg-color);
     color: var(--dark-text);
-    overflow-x: hidden;
     line-height: 1.6;
 }
 
@@ -327,7 +331,7 @@ section {
     }
     
     .display-3 {
-        font-size: 2.5rem; /* Make hero Name slightly smaller to fit better */
+        font-size: 2.2rem; /* Adjusted hero Name to be slightly smaller on standard mobile */
     }
 }
 
@@ -427,6 +431,31 @@ body.dark-mode .custom-scrollbar::-webkit-scrollbar-track {
     background: rgba(255, 255, 255, 0.05);
 }
 
+/* Hero Responsive Fixes */
+@media (min-width: 992px) {
+    .hero-text-wrapper {
+        width: 75%;
+    }
+}
+
+.hero-actions {
+    flex-wrap: wrap; 
+}
+
+@media (max-width: 575.98px) {
+    .hero-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .hero-actions .btn {
+        width: 100%;
+        margin-bottom: 0.5rem;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+}
+
 /* Swiper Outer Edge Navigation */
 @media (max-width: 767px) {
     .swiper-button-prev, .swiper-button-next, .exp-prev, .exp-next {
@@ -512,4 +541,59 @@ body.dark-mode .custom-scrollbar::-webkit-scrollbar-track {
 }
 #experience .glass-card:hover::before {
     height: 100%;
+}
+
+/* Mobile Full Screen Menu */
+@media (max-width: 991px) {
+    .navbar-collapse, .collapsing {
+        background-color: var(--bg-color) !important;
+        position: fixed !important;
+        top: 70px; /* Keep it below navbar */
+        left: 0;
+        width: 100%;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        padding: 0 10%;
+        z-index: 1050;
+    }
+    
+    .navbar-collapse.show, .collapsing {
+        display: flex !important;
+        flex-direction: column;
+        height: calc(100vh - 70px) !important;
+        overflow-y: auto;
+    }
+    
+    body.dark-mode .navbar-collapse, body.dark-mode .collapsing {
+        background-color: var(--bg-color) !important;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.7);
+    }
+    
+    .navbar-nav {
+        flex-grow: 1;
+        width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+    
+    .navbar-nav .nav-item {
+        width: 100%;
+    }
+    
+    .navbar-nav .nav-link {
+        font-size: 0.95rem;
+        padding: 15px 0;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        border-bottom: 1px solid rgba(0,0,0,0.05);
+        display: block;
+        width: 100%;
+    }
+    
+    body.dark-mode .navbar-nav .nav-link {
+        border-bottom-color: rgba(255,255,255,0.05);
+    }
+    
+    .navbar-nav .nav-item:nth-last-child(2) .nav-link {
+         border-bottom: none; 
+    }
 }
